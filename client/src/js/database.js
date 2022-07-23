@@ -17,16 +17,16 @@ export const putDb = async (content) => {
   console.error('putDb not implemented');
 
   // Create a connection to the database and version we want to use.
-  const contactDb = await openDB('contact', 1);
+  const jatetDb = await openDB('jate', 1);
 
   // Create a new transaction and specify the database and data privileges.
-  const tx = contactDb.transaction('contact', 'readwrite');
+  const tx = jateDb.transaction('jate', 'readwrite');
 
   // Open up the desired object store.
-  const store = tx.objectStore('contact');
+  const store = tx.objectStore('jate');
 
   // Use the .add() method on the store and pass in the content.
-  const request = store.add({ name: name, home_phone: home, cell_phone: cell, email: email });
+  const request = store.add({ data: content });
 
   // Get confirmation of the request.
   const result = await request;
@@ -38,14 +38,14 @@ export const putDb = async (content) => {
 export const getDb = async () => {
   console.error('getDb not implemented');
 
-  // Create a connection to the database database and version we want to use.
-  const contactDb = await openDB('contact', 1);
+  // Create a connection to the database and version we want to use.
+  const jateDb = await openDB('jate', 1);
 
   // Create a new transaction and specify the database and data privileges.
-  const tx = contactDb.transaction('contact', 'readonly');
+  const tx = jateDb.transaction('jate', 'readonly');
 
   // Open up the desired object store.
-  const store = tx.objectStore('contact');
+  const store = tx.objectStore('jate');
 
   // Use the .getAll() method to get all data in the database.
   const request = store.getAll();
