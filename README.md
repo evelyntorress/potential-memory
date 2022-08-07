@@ -1,6 +1,6 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-# 19 Progressive Web Applications (PWA): Text Editor
+#Progressive Web Applications (PWA): Text Editor
 
 ## Description
 
